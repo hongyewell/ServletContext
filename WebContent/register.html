@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>注册页面</title>
+	<script type="text/javascript">
+		function changeImage(img){
+			
+			img.src = img.src+"?"+ new Date().getTime();
+		}
+	</script>
 </head>
 <body>
 	<form action="">
@@ -12,7 +18,7 @@
 	<br>
 	认证码： <input type="text" name="checkcode">
 	<br>
-	<img src="/ServletContext/ServletResponseDemo">
+	<img src="/ServletContext/ServletResponseDemo" onclick="changeImage(this)" alt="换一张" style="cursor: hand">
 	<br>
 	<input type="submit" value="注册">
 	</form>

@@ -21,8 +21,6 @@ public class ServletResponseDemo extends HttpServlet {
 	//图片的宽和高
 	public static final int WIDTH = 120;
 	public static final int HEIGHT = 25;
-    
-  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
@@ -49,11 +47,8 @@ public class ServletResponseDemo extends HttpServlet {
 		//发头控件浏览器不要缓存
 		response.setDateHeader("expries", -1);
 		response.setHeader("Cache-Control", "no-cache");
-		response.setHeader("Pragma", "no-cache");
-		
+		response.setHeader("Pragma", "no-cache");	
 		ImageIO.write(image, "jpg", response.getOutputStream());
-		
-	
 	}
 	
 	private void setBackGround(Graphics g) {
